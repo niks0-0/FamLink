@@ -1,4 +1,4 @@
-package com.yourname.famlink.activities;
+package com.nm.famlink.activities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,7 +30,7 @@ public class PhoneAuthActivity extends AppCompatActivity {
             @Override public void onVerificationCompleted(PhoneAuthCredential credential) {
                 mAuth.signInWithCredential(credential).addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        startActivity(new Intent(PhoneAuthActivity.this, OnboardingActivity.class));
+                        startActivity(new Intent(PhoneAuthActivity.this, com.yourname.famlink.activities.OnboardingActivity.class));
                         finish();
                     }
                 });
@@ -39,7 +39,7 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 Toast.makeText(PhoneAuthActivity.this, "Verification failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
             }
             @Override public void onCodeSent(String verificationId, PhoneAuthProvider.ForceResendingToken token) {
-                Intent i = new Intent(PhoneAuthActivity.this, OtpVerifyActivity.class);
+                Intent i = new Intent(PhoneAuthActivity.this, com.yourname.famlink.activities.OtpVerifyActivity.class);
                 i.putExtra("verificationId", verificationId);
                 i.putExtra("phone", etPhone.getText().toString());
                 startActivity(i);
