@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "451012537588",
+    "project_id": "famlink-app",
+    "storage_bucket": "famlink-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451012537588:android:afd23a2bba63555a9642a1",
+        "android_client_info": {
+          "package_name": "com.nm.famlink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTE9gLgFtli9MvPez8EVV0kVL9BEB3JMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
